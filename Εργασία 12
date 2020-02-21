@@ -1,0 +1,15 @@
+from datetime import datetime
+print (datetime.now().strftime("Today: %d/%m/%Y"))
+
+future = str(input('Date: '))
+try:
+    dt_start = datetime.strptime(future, "%d/%m/%Y")
+except ValueError:
+    print ("Wrong")
+
+today = (datetime.now().strftime("%d/%m/%Y"))
+diff = str(future - today)
+print (diff.days)
+diffhours = diff *24
+print (diffhours)
+diffscs = diffhours*3600
