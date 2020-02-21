@@ -1,0 +1,25 @@
+ def longest_words(filename):
+    with open(filename, 'r') as infile:
+        words = infile.read().split()
+    max_len = len(max(words, key=len))
+    return [word for word in words if len(word) == max_len]
+
+print(longest_words('test.txt'))
+x = (longest_words('test.txt'))
+
+def listToString(x):  
+    x1 = ""  
+    for ele in x:  
+      x1 += ele   
+    return x1  
+
+print (listToString(x))
+sx = (listToString(x))
+newstr = sx;
+vowels = ('a', 'e', 'i', 'o', 'u');
+for x in sx.lower():
+  if x in vowels:
+    newstr = newstr.replace(x,"");
+
+print(newstr)[::-1];
+
